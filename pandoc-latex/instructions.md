@@ -69,17 +69,21 @@ pandoc paper.md \
 ### Numbered Equations and References
 Here is an example of a numbered equation:
 
+```
 \begin{equation}
 T[i,s] \equiv T_{r,c} = v
 \label{eq:basic_representation}
 \end{equation}
+```
 
 TTo reference this equation within your text, write `\ref{eq:basic_representation}`.
 
 ### Images
 Include images using the following syntax:
 
+```
 ![Elementary (blue) and derived (red) operators.](primary_operators.png){width=70%}
+```
 
 The text inside the square brackets serves as the caption.
 Image numbering is handled automatically.
@@ -87,7 +91,9 @@ Image numbering is handled automatically.
 ### Tables
 To add a caption below a table, use the following format:
 
+```
 Table: Caption for the table of operators {#tbl:operators}
+```
 
 You can refer to this table later in the text using `\ref{tbl:operators}`.
 
