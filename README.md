@@ -1,7 +1,9 @@
-# 📓 Linux notes
+# Notes
 
-Welcome to my public notes!
+My personal knowledge base covering Linux, Pandoc, LaTeX and more. 
 
-## 💻 Drivers
+## Pandoc
+- [How to Create Essays with Pandoc and Markdown](pandoc-latex/instructions.md)
 
-* [Install RTL8852AU ARCHER TX20U PLUS AX1800 driver on Linux Mint](Install_AX1800.md)
+## Linux
+- [Install RTL8852AU ARCHER TX20U PLUS AX1800 driver on Linux Mint](linux/Install_AX1800.md)
