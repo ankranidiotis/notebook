@@ -10,8 +10,9 @@ My personal knowledge base covering Linux, Pandoc, LaTeX and more.
 - [Install GUI on Linux from command line](linux/install_gui_for_cmd.md)
 - [Install OCR on Linux](linux/ocr.md)
 
-## Google Cloud Console
-- [Setup Google Cloud Server](gcloud/gcloud.md)
+## Google
+- [Setup Google Cloud Server](Google/gcloud.md)
+- [Generate direct link to a file in Google Drive()](Google/gdrive.md)
 
 ## Misc
 - [Gmail Sync issue on HyperOS](misc/gmail-sync.md)
