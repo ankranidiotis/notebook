@@ -9,6 +9,7 @@ My personal knowledge base covering Linux, Pandoc, LaTeX and more.
 - [Install RTL8852AU ARCHER TX20U PLUS AX1800 driver on Linux Mint](linux/Install_AX1800.md)
 - [Install GUI on Linux from command line](linux/install_gui_for_cmd.md)
 - [Install OCR on Linux](linux/ocr.md)
+- [OpenDNS Setup Guide (for Network-Wide Filtering)](linux/OpenDNS.md)
 
 ## Google
 - [Setup Google Cloud Server](Google/gcloud.md)
