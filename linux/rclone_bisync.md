@@ -22,7 +22,7 @@ This step establishes the baseline state and must be run once.
 	    --resync \
 	    --progress \
 	    --log-file ~/bisync_initial.log
-	    /path/to/local GDRIVE_REMOTE:path/to/remote \
+	    /path/to/local GDRIVE_REMOTE:path/to/remote
     ```
     
     > **Note:** Remove the `--resync` flag for all subsequent automated runs. This flag generates initial state files stored in `.cache/rclone/bisync` which will be used later for comparing and updating. 
