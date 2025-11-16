@@ -48,7 +48,6 @@ Create a script for the cron job, as cron needs the full path for the rclone exe
         --progress \
         --log-file "$LOG_FILE" \
         --log-level INFO \
-        --check-access \
         /path/to/local/folder \
         GDRIVE_REMOTE:path/to/remote/folder
     ```
