@@ -11,6 +11,7 @@ My personal knowledge base covering Linux, Pandoc, LaTeX and more.
 - [Install OCR on Linux](linux/ocr.md)
 - [OpenDNS Setup Guide (for Network-Wide Filtering)](linux/OpenDNS.md)
 - [Rclone Bi-Directional Sync (bisync)](linux/rclone_bisync.md)
+- [Epson L6160 on Modern Linux Mint/Ubuntu](linux/epson.md)
 
 ## Google
 - [Setup Google Cloud Server](Google/gcloud.md)
