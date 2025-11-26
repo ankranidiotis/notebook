@@ -26,6 +26,6 @@ My personal knowledge base covering Linux, Pandoc, LaTeX and more.
 - [Obsidian & Zotero](obsidian/zotero.md)
 
 ## Networking
-
+- [SSH Tunnel](networking/ssh_tunnel.md)
 
 
