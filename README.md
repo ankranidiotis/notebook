@@ -28,4 +28,6 @@ My personal knowledge base covering Linux, Pandoc, LaTeX and more.
 ## Networking
 - [SSH Tunnel](networking/ssh_tunnel.md)
 
+## AI
+- [Google Prompting Essentials](AI/Google%20Prompting%20Essentials.md)
 
