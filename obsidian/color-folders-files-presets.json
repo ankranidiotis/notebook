@@ -1,34 +1,4 @@
 {
-  "styles": {
-    "Models-Frameworks": {
-      "backgroundColor": "#fb7e7e",
-      "textColor": "#000000"
-    },
-    "Paper": {
-      "backgroundColor": "#ffde85",
-      "textColor": "#000000"
-    },
-    "Promts": {
-      "backgroundColor": "#fd86cc",
-      "textColor": "#000000"
-    },
-    "PSO": {
-      "backgroundColor": "#83e4fc",
-      "textColor": "#000000"
-    },
-    "Sports Timetabling Problem": {
-      "backgroundColor": "#9afd86",
-      "textColor": "#000000"
-    },
-    "Templates": {
-      "backgroundColor": "#fd9a81",
-      "textColor": "#000000"
-    },
-    "Αλγόριθμοι Βελτιστοποίησης": {
-      "backgroundColor": "#828282",
-      "textColor": "#ffffff"
-    }
-  },
   "presets": {
     "Red": {
       "backgroundColor": "#fb7e7e",

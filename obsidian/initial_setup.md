@@ -6,6 +6,6 @@
 
 ## Community plugins
 - Remotely Save
-- Color Folders and Files (find templates [here](/obsidian/color-folders-files-templates.json))
+- Color Folders and Files (find presets [here](/obsidian/color-folders-files-presets.json))
 - Calendar
 
