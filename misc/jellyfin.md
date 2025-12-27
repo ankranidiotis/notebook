@@ -65,8 +65,7 @@ services:
   jellyfin:
     image: jellyfin/jellyfin:latest
     container_name: jellyfin
-    # Σημαντικό: Το Jellyfin χρησιμοποιεί το δίκτυο του Tailscale
-    network_mode: "service:tailscale"
+    network_mode: "service:tailscale" # Σημαντικό: Το Jellyfin χρησιμοποιεί το δίκτυο του Tailscale
     volumes:
       - ./config:/config
       - ./cache:/cache
@@ -146,4 +145,86 @@ sudo ufw enable
 - Στη δεξιά πλευρά της γραμμής, κάντε κλικ στις τρεις τελείες (...).
 - Επιλέξτε το Disable key expiry.
 - Θα εμφανιστεί μια μικρή ένδειξη "Expiry disabled" δίπλα ή κάτω από το όνομα του server, επιβεβαιώνοντας ότι η σύνδεση είναι πλέον μόνιμη.
+
+---
+
+## 10. Cloud Media Server
+
+Σύνδεση του VPS με το Google Drive. 
+
+**Εγκατάσταση του rclone στον VPS**
+
+Στον VPS εκτελείτε τον σύνδεσμο `sudo apt-get install rclone`. Αποσυνδέεστε και στην συνέχεια δημιουργείτε ένα SSH Tunnel ανάμεσα στον υπολογιστή μου και στον VPS:
+
+```bash
+ssh -L 53682:localhost:53682 root@your_vps_ip
+```
+για να μπορέσετε να κάνετε αυθεντικοποίηση στον λογαριασμό Google Drive. Στο ίδιο τερματικό και ενόσω είστε συνδεδεμένος στον VPS, εκτελέστε `rclone config` και επιλέξτε `n` για να δημιουργήσετε έναν νέο λογαριασμό. Αποθηκεύστε τον λογαριασμό με το όνομα `gdrive` και επιλέξτε τον τύπο `Google Drive`. 
+
+Όταν φτάσετε στο σημείο της αυθεντικοποίησης, αντιγράψτε τον σύνδεσμο και ανοίξτε τον στον browser σας ο οποίος είναι συνδεδεμένος στον επιλεγμένο λογαριασμό Google. 
+
+**Mounting**
+
+Δημιουργία script για τον mount των φακέλων:
+
+```bash
+sudo nano /usr/bin/mount-media.sh
+```
+
+Μέσα στο αρχείο προσθέτουμε το εξής περιεχόμενο:
+
+```bash
+#!/bin/bash
+# Mount Ταινίες
+rclone mount gdrive:Movies /home/media/movies --allow-other --vfs-cache-mode full --vfs-cache-max-size 10G --dir-cache-time 1000h &
+
+# Mount Σειρές
+rclone mount gdrive:TVShows /home/media/tvshows --allow-other --vfs-cache-mode full --vfs-cache-max-size 10G --dir-cache-time 1000h &
+
+wait
+```
+
+Το & στο τέλος δηλώνει ότι η κάθε εντολή θα εκτελεί ανεξάρτητα από την άλλη στο παρασκήνιο. Το wait σημαίνει ότι η εκτέλεση του script θα σταματήσει όταν οι δύο εντολές θα έχουν τελειώσει. 
+
+Στην συνέχεια κάνουμε το αρχείο εκτελέσιμο με τον σύνδεσμο `sudo chmod +x /usr/bin/mount-media.sh`.
+
+Για να τρέχει απρόσκοπτα, θα δημιουργήσουμε έναν systemd service.
+
+```bash
+sudo nano /etc/systemd/system/rclone-media.service
+```
+
+Μέσα στο αρχείο προσθέτουμε το εξής περιεχόμενο:
+
+```bash
+[Unit]
+Description=Rclone Mount Media (Movies and TV)
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/mount-media.sh
+ExecStop=/bin/fusermount -u /home/media/movies
+ExecStop=/bin/fusermount -u /home/media/tvshows
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Στην συνέχεια τρέχουμε:
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable --now rclone-media
+```
+
+Τέλος, κάνουμε επανεκκίνηση του Jellyfin server:
+
+```bash
+docker restart jellyfin
+```
+και έπειτα "Scan Media Library". 
+
 
