@@ -123,11 +123,12 @@ sudo ufw enable
 
 ## 8. Πρόσθετες Ρυθμίσεις
 * **Transcoding:** Dashboard > Users > Media Playback > Απενεργοποίηση (για μείωση φόρτου CPU στο VPS).
-* **Plugins:** Dashboard > Plugins > OpenSubtitles.
+* **Plugins:** Dashboard > Plugins > OpenSubtitles, Trakt, Playback Reporting.
 * **Library:** Dashboard > Libraries > Manage Library > Subtitles > Download languages: Greek.
 
 **Σημείωση:** Με αυτό το setup, η κίνηση των δεδομένων σας είναι πλήρως κρυπτογραφημένη και ο server παραμένει αόρατος σε οποιονδήποτε τρίτο στο διαδίκτυο.
 
+---
 
 ## 9. Λίστα Ελέγχου Μετά την Εγκατάσταση (Post-Installation Checklist)
 
