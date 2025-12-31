@@ -41,6 +41,45 @@
 
 Αντί της διεύθυνσης IP μπορεί να χρησιμοποιηθεί το μοναδικό αναγνωριστικό της μηχανής Β στο δίκτυο mesh που αποτελείται από το όνομα της μηχανής και το domain name του δικτύου mesh. Για παράδειγμα, `mymachine.tail7dfh9.ts.net`.
 
+# Ασφάλεια σύνδεσης
+
+Πρέπει να κλείσουμε την θύρα 22 για πρόσβαση από την δημόσια IP της μηχανής Β, και να αφήσουμε ανοικτή την θύρα 22 μόνον για πρόσβαση από το δίκτυο mesh. Πρώτα τρέχουμε
+
+```bash
+ip a
+```
+για να βεβαιώσουμε ότι η διεπαφή του meshnet είναι η `tailscale0`. Στην συνέχεια επιτρέπουμε την πρόσβαση μόνον μέσω VPN:
+
+```bash
+sudo ufw allow in on tailscale0 to any port 22
+```
+και τρέχουμε `sudo ufw status numbered` για να δούμε τους κανόνες όπως έχουν δημιουργηθεί και αριθμηθεί:
+
+```
+sudo ufw status numbered
+Status: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 8096/tcp                   ALLOW IN    Anywhere                  
+[ 2] 22/tcp                     LIMIT IN    Anywhere                  
+[ 3] 41641/udp                  ALLOW IN    Anywhere                  
+[ 4] 32400/tcp                  ALLOW IN    Anywhere                  
+[ 5] 22 on tailscale0           ALLOW IN    Anywhere                  
+[ 6] 8096/tcp (v6)              ALLOW IN    Anywhere (v6)             
+[ 7] 22/tcp (v6)                LIMIT IN    Anywhere (v6)             
+[ 8] 41641/udp (v6)             ALLOW IN    Anywhere (v6)             
+[ 9] 32400/tcp (v6)             ALLOW IN    Anywhere (v6)             
+[10] 22 (v6) on tailscale0      ALLOW IN    Anywhere (v6)     
+```
+
+Οι κανόνες 2 και 7 που περιέχουν την θύρα 22πρέπει να διαγραφούν. Για τον λόγο αυτόν τρέχουμε `sudo ufw delete 2` και `sudo ufw delete 7`. Αντιθέτως, οι θύρες 22 που σχετίζονται με το tailscale0 παραμένουν. 
+
+Ισχύει ότι:
+- θύρα 8096 είναι για το jellyfin
+- θύρα 41641 είναι για το tailscale
+- θύρα 32400 είναι για το plex.
+
 # Σύνδεση μέσω VNC
 
 Απαιτείται η εγκατάσταση του VNC στην μηχανή Β (δες [εδώ](vnc.md)). Έπειτα με την βοήθεια ενός remote desktop client (π.χ. Remmina) στην μηχανή Α κάνουμε τα εξής:
