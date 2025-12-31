@@ -110,3 +110,80 @@ sudo ufw allow 32400/tcp
 ```
 
 7. Ο Plex client σε υπολογιστή τρέχει μέσω web browser στην διεύθυνση http://contabo_vps_ip:32400/web
+
+
+# Plex Server και Tailscale
+
+Αν ο VPS και οι συσκευές που έχουν πρόσβαση σε αυτόν ανήκουν σε ένα tailscale network, τότε ο Plex Server δεν χρειάζεται να εκτίθεται δημόσια, αλλά θα είναι κρυμμένος μέσα στο δίκτυο του tailscale. Για τον σκοπό αυτόν κάνουμε τα εξής:
+
+1. Συνδεόμαστε στον Plex Server μέσω του web browser στην διεύθυνση http://tailscale_vps_ip:32400/web
+2. Settings > Network > Custom server access URLs και προσθέτουμε την διεύθυνση http://tailscale_vps_ip:32400. 
+3. Settings > Remote Access > Disable remote access.
+
+Παράλληλα, επιτρέπουμε την πρόσβαση στον Plex Server (θύρα 32400) μόνον μέσω του tailscale:
+
+```Bash
+sudo ufw allow in on tailscale0 to any port 32400
+```
+
+και αποκλείουμε την πρόσβαση από το δημόσιο δίκτυο:
+
+```Bash
+sudo ufw status numbered
+```
+που δίνει για παράδειγμα
+
+```
+ sudo ufw status numbered
+Status: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 41641/udp                  ALLOW IN    Anywhere                  
+[ 2] 32400/tcp                  ALLOW IN    Anywhere                  
+[ 3] 22 on tailscale0           ALLOW IN    Anywhere                  
+[ 4] 32400 on tailscale0        ALLOW IN    Anywhere                  
+[ 5] 32400/tcp (v6)             ALLOW IN    Anywhere (v6)             
+[ 6] 22 (v6) on tailscale0      ALLOW IN    Anywhere (v6)             
+[ 7] 41641/udp (v6)             ALLOW IN    Anywhere (v6)             
+[ 8] 32400 (v6) on tailscale0   ALLOW IN    Anywhere (v6)   
+```
+
+και διαγράφουμε την πρόσβαση 32400/tcp για IPv4 και για IPv6 από το δημόσιο δίκτυο:
+
+```Bash
+sudo ufw delete 2
+```
+που δίνει 
+
+```
+sudo ufw status numbered
+Status: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 41641/udp                  ALLOW IN    Anywhere                  
+[ 2] 22 on tailscale0           ALLOW IN    Anywhere                  
+[ 3] 32400 on tailscale0        ALLOW IN    Anywhere                  
+[ 4] 32400/tcp (v6)             ALLOW IN    Anywhere (v6)             
+[ 5] 22 (v6) on tailscale0      ALLOW IN    Anywhere (v6)             
+[ 6] 41641/udp (v6)             ALLOW IN    Anywhere (v6)             
+[ 7] 32400 (v6) on tailscale0   ALLOW IN    Anywhere (v6)   
+```
+
+και μετά διαγράφουμε και το 4.
+
+```
+sudo ufw status numbered
+Status: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 41641/udp                  ALLOW IN    Anywhere                  
+[ 2] 22 on tailscale0           ALLOW IN    Anywhere                  
+[ 3] 32400 on tailscale0        ALLOW IN    Anywhere                  
+[ 4] 22 (v6) on tailscale0      ALLOW IN    Anywhere (v6)             
+[ 5] 41641/udp (v6)             ALLOW IN    Anywhere (v6)             
+[ 6] 32400 (v6) on tailscale0   ALLOW IN    Anywhere (v6)  
+```
+Έτσι η πρόσβαση στον Plex Server (θύρα 32400) γίνεται **μόνον** μέσω του tailscale.
