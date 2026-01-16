@@ -13,6 +13,7 @@ My personal knowledge base covering Linux, Pandoc, LaTeX and more.
 - [Rclone Bi-Directional Sync (bisync)](linux/rclone_bisync.md)
 - [Epson L6160 on Modern Linux Mint/Ubuntu](linux/epson.md)
 - [Docker Engine + Windows 11 VM (on Linux Mint 22.1) — Cheat Sheet](linux/WinApps.md)
+- [Autosleep](linux/autosleep.md)
 
 ## Google
 - [Setup Google Cloud Server](Google/gcloud.md)
