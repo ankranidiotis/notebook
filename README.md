@@ -19,6 +19,7 @@ My personal knowledge base covering Linux, Pandoc, LaTeX and more.
 ## Google
 - [Setup Google Cloud Server](Google/gcloud.md)
 - [Generate direct link to a file in Google Drive()](Google/gdrive.md)
+- [Firebase](Google/Firebase.md)
 
 ## Misc
 - [Gmail Sync issue on HyperOS](misc/gmail-sync.md)
