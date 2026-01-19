@@ -47,6 +47,7 @@ csl: ieee.csl
 
 titlepage: true
 titlepage-text-color: "000000"
+toc: true
 
 mainfont: Times New Roman
 ---
@@ -63,8 +64,9 @@ pandoc essay.md \
   --pdf-engine=xelatex \
   -V mainfont="Times New Roman" \
   -V sansfont="Times New Roman" \
-  -V lang=el
-```
+  -V lang=el \
+  --number-sections
+  ```
 
 # Writing in Markdown
 ### Numbered Equations and References
@@ -83,11 +85,12 @@ TTo reference this equation within your text, write `\ref{eq:basic_representatio
 Include images using the following syntax:
 
 ```
-![Elementary (blue) and derived (red) operators.](primary_operators.png){width=70%}
+![Elementary (blue) and derived (red) operators.](primary_operators.png){width=70%}{#fig:myfigure}
 ```
 
 The text inside the square brackets serves as the caption.
 Image numbering is handled automatically.
+You can refer to this image later in the text using `\ref{fig:myfigure}`.
 
 ### Tables
 To add a caption below a table, use the following format:
