@@ -37,9 +37,7 @@ At the beginning of your Markdown file, include a YAML metadata block like this:
 ```yaml
 ---
 title: "Test Title"
-author:
-  - name: "your name"
-    affiliation: "your institution"
+author: "your name"
 date: "2025-11-01"
 abstract: "This paper is testing Pandoc technology..."
 keywords: [Markdown, Pandoc, LaTeX, something]
@@ -57,12 +55,15 @@ mainfont: Times New Roman
 # Generating the Document
 To convert your Markdown file into a PDF, run the following command:
 ```
-pandoc paper.md \
-    --from markdown --to pdf \
-    --output final_paper.pdf \
-    --citeproc \
-    --template=eisvogel.latex \
-    --pdf-engine=xelatex
+pandoc essay.md \
+  --from markdown --to pdf \
+  --output final_paper.pdf \
+  --citeproc \
+  --template=eisvogel.latex \
+  --pdf-engine=xelatex \
+  -V mainfont="Times New Roman" \
+  -V sansfont="Times New Roman" \
+  -V lang=el
 ```
 
 # Writing in Markdown
