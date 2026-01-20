@@ -101,4 +101,6 @@ Table: Caption for the table of operators {#tbl:operators}
 
 You can refer to this table later in the text using `\ref{tbl:operators}`.
 
+### Bibliography
 
+If we need a word to start with a capital letter, we can put curly brackets around it in the bibliography file, e.g. `{M}athematics`.
