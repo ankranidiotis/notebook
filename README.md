@@ -27,6 +27,8 @@ My personal knowledge base covering Linux, Pandoc, LaTeX and more.
 - [Τρόπος αποδοτικής μελέτης](misc/study_effieciently.md)
 - [Plex Server](misc/plex.md)
 - [Jellyfin](misc/jellyfin.md)
+- [Οι μεγάλες πέτρες της ζωής](misc/big_rocks_of_life.md)
+- [Λειτουργία τηλεσκοπίου Κρυονερίου Κορινθίας](misc/telescope.md)
 
 ## Obsidian
 - [Initial Setup](obsidian/initial_setup.md)
