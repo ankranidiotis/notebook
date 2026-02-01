@@ -30,6 +30,7 @@ My personal knowledge base covering Linux, Pandoc, LaTeX and more.
 - [Οι μεγάλες πέτρες της ζωής](misc/big_rocks_of_life.md)
 - [Λειτουργία τηλεσκοπίου Κρυονερίου Κορινθίας](misc/telescope.md)
 - [Κατάλογος έργων κλασικής μουσικής](misc/classical_music.md)
+- [Γιατί βλέπουμε πάντοτε την ίδια πλευρά της Σελήνης](misc/moon.md)
 
 ## Obsidian
 - [Initial Setup](obsidian/initial_setup.md)
