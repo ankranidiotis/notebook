@@ -44,4 +44,5 @@ My personal knowledge base covering Linux, Pandoc, LaTeX and more.
 
 ## AI
 - [Google Prompting Essentials](AI/Google%20Prompting%20Essentials.md)
+- [OpenClaw](AI/openclaw.md)
 
