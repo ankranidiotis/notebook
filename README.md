@@ -4,6 +4,7 @@ My personal knowledge base covering Linux, Pandoc, LaTeX and more.
 
 ## Pandoc
 - [How to create Essays with Pandoc and Markdown](pandoc-latex/instructions.md)
+- [Pandoc Academic Paper Template](pandoc-latex/paper.md)
 
 ## Linux
 - [Install RTL8852AU ARCHER TX20U PLUS AX1800 driver on Linux Mint](linux/Install_AX1800.md)
@@ -14,7 +15,7 @@ My personal knowledge base covering Linux, Pandoc, LaTeX and more.
 - [Epson L6160 on Modern Linux Mint/Ubuntu](linux/epson.md)
 - [Docker Engine + Windows 11 VM (on Linux Mint 22.1) — Cheat Sheet](linux/WinApps.md)
 - [Autosleep](linux/autosleep.md)
-- [Install GUI on Linux from command line](linux/graphics.md)
+- [Install Ubuntu MATE Desktop Environment on Linux](linux/graphics.md)
 
 ## Google
 - [Setup Google Cloud Server](Google/gcloud.md)
@@ -31,6 +32,8 @@ My personal knowledge base covering Linux, Pandoc, LaTeX and more.
 - [Λειτουργία τηλεσκοπίου Κρυονερίου Κορινθίας](misc/telescope.md)
 - [Κατάλογος έργων κλασικής μουσικής](misc/classical_music.md)
 - [Γιατί βλέπουμε πάντοτε την ίδια πλευρά της Σελήνης](misc/moon.md)
+- [Add Bookmarks to PDF with pdftk](misc/pdftk.md)
+- [PlexTraktSync: Sync Plex Watch Status with Trakt](misc/plextraktsync.md)
 
 ## Obsidian
 - [Initial Setup](obsidian/initial_setup.md)
