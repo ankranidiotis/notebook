@@ -1,0 +1,41 @@
+{
+  "presets": {
+    "Red": {
+      "backgroundColor": "#fb7e7e",
+      "textColor": "#000000"
+    },
+    "Yellow": {
+      "backgroundColor": "#ffde85",
+      "textColor": "#000000"
+    },
+    "Purple": {
+      "backgroundColor": "#fd86cc",
+      "textColor": "#000000"
+    },
+    "Ciel": {
+      "backgroundColor": "#83e4fc",
+      "textColor": "#000000"
+    },
+    "Green": {
+      "backgroundColor": "#9afd86",
+      "textColor": "#000000"
+    },
+    "Orange": {
+      "backgroundColor": "#fd9a81",
+      "textColor": "#000000"
+    },
+    "Grey": {
+      "backgroundColor": "#828282",
+      "textColor": "#ffffff"
+    }
+  },
+  "presetOrder": [
+    "Red",
+    "Yellow",
+    "Purple",
+    "Ciel",
+    "Green",
+    "Orange",
+    "Grey"
+  ]
+}
