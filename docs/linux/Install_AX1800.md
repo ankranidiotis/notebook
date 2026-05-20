@@ -1,4 +1,4 @@
-![adapter](https://static.tp-link.com/upload/image-line/Archer_TX20U_Plus_2000px_normal_20230809095804d.jpg)
+![adapter](Archer_TX20U_Plus.jpg)
 
 # INSTALLATION OF RTL8852AU ARCHER TX20U PLUS AX1800 DRIVER
 
