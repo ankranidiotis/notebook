@@ -1,51 +1,73 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
+<div class="hero" markdown>
+
 # Notes
 
-My personal knowledge base covering Linux, Pandoc, LaTeX and more. 
+Personal knowledge base covering Linux, networking, AI, Pandoc, and more.
 
-## Pandoc
-- [How to create Essays with Pandoc and Markdown](pandoc-latex/instructions.md)
-- [Pandoc Academic Paper Template](pandoc-latex/paper.md)
+</div>
 
-## Linux
-- [Install RTL8852AU ARCHER TX20U PLUS AX1800 driver on Linux Mint](linux/Install_AX1800.md)
-- [Install GUI on Linux from command line](linux/install_gui_for_cmd.md)
-- [Install OCR on Linux](linux/ocr.md)
-- [OpenDNS Setup Guide (for Network-Wide Filtering)](linux/OpenDNS.md)
-- [Rclone Bi-Directional Sync (bisync)](linux/rclone_bisync.md)
-- [Epson L6160 on Modern Linux Mint/Ubuntu](linux/epson.md)
-- [Docker Engine + Windows 11 VM (on Linux Mint 22.1) — Cheat Sheet](linux/WinApps.md)
-- [Autosleep](linux/autosleep.md)
-- [Install Ubuntu MATE Desktop Environment on Linux](linux/graphics.md)
+<div class="grid cards" markdown>
 
-## Google
-- [Setup Google Cloud Server](Google/gcloud.md)
-- [Generate direct link to a file in Google Drive()](Google/gdrive.md)
-- [Firebase](Google/Firebase.md)
+-   :material-linux:{ .lg .middle } **Linux**
 
-## Misc
-- [Gmail Sync issue on HyperOS](misc/gmail-sync.md)
-- [yt-dlp](misc/yt-dlp.md)
-- [Τρόπος αποδοτικής μελέτης](misc/study_effieciently.md)
-- [Plex Server](misc/plex.md)
-- [Jellyfin](misc/jellyfin.md)
-- [Οι μεγάλες πέτρες της ζωής](misc/big_rocks_of_life.md)
-- [Λειτουργία τηλεσκοπίου Κρυονερίου Κορινθίας](misc/telescope.md)
-- [Κατάλογος έργων κλασικής μουσικής](misc/classical_music.md)
-- [Γιατί βλέπουμε πάντοτε την ίδια πλευρά της Σελήνης](misc/moon.md)
-- [Add Bookmarks to PDF with pdftk](misc/pdftk.md)
-- [PlexTraktSync: Sync Plex Watch Status with Trakt](misc/plextraktsync.md)
+    ---
 
-## Obsidian
-- [Initial Setup](obsidian/initial_setup.md)
-- [Obsidian & Zotero](obsidian/zotero.md)
+    Drivers, desktop setup, tools, and system configuration for Linux Mint and Ubuntu.
 
-## Networking
-- [SSH](networking/ssh.md)
-- [SSH Tunnel](networking/ssh_tunnel.md)
-- [VNC](networking/vnc.md)
-- [Remote Connection](networking/remote_connection.md)
+    [:octicons-arrow-right-24: Browse](linux/Install_AX1800.md)
 
-## AI
-- [Google Prompting Essentials](AI/Google%20Prompting%20Essentials.md)
-- [OpenClaw](AI/openclaw.md)
+-   :material-google:{ .lg .middle } **Google**
 
+    ---
+
+    Google Cloud server setup, Drive direct links, and Firebase configuration.
+
+    [:octicons-arrow-right-24: Browse](Google/gcloud.md)
+
+-   :material-network-outline:{ .lg .middle } **Networking**
+
+    ---
+
+    SSH, SSH tunnels, VNC, and remote connection setup guides.
+
+    [:octicons-arrow-right-24: Browse](networking/ssh.md)
+
+-   :material-robot-outline:{ .lg .middle } **AI**
+
+    ---
+
+    OpenClaw setup and Google Prompting Essentials notes.
+
+    [:octicons-arrow-right-24: Browse](AI/openclaw.md)
+
+-   :material-bookshelf:{ .lg .middle } **Misc**
+
+    ---
+
+    Media servers, astronomy, classical music, productivity tips, and more.
+
+    [:octicons-arrow-right-24: Browse](misc/plex.md)
+
+-   :material-note-text-outline:{ .lg .middle } **Obsidian**
+
+    ---
+
+    Initial setup guide and Zotero integration for academic workflows.
+
+    [:octicons-arrow-right-24: Browse](obsidian/initial_setup.md)
+
+-   :material-file-document-outline:{ .lg .middle } **Pandoc**
+
+    ---
+
+    Create academic papers and essays with Pandoc, Markdown, and LaTeX.
+
+    [:octicons-arrow-right-24: Browse](pandoc-latex/instructions.md)
+
+</div>
