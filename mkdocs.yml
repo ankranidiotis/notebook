@@ -1,0 +1,89 @@
+site_name: Notes
+site_description: Personal knowledge base covering Linux, networking, AI, and more
+site_author: Nassos Kranidiotis
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Linux:
+    - Install AX1800 Driver: linux/Install_AX1800.md
+    - Install GUI from Command Line: linux/install_gui_for_cmd.md
+    - Install OCR: linux/ocr.md
+    - OpenDNS Setup: linux/OpenDNS.md
+    - Rclone Bisync: linux/rclone_bisync.md
+    - Epson L6160: linux/epson.md
+    - Docker + Windows 11 VM: linux/WinApps.md
+    - Autosleep: linux/autosleep.md
+    - Install Ubuntu MATE: linux/graphics.md
+  - Google:
+    - Google Cloud Server: Google/gcloud.md
+    - Google Drive Direct Link: Google/gdrive.md
+    - Firebase: Google/Firebase.md
+  - Networking:
+    - SSH: networking/ssh.md
+    - SSH Tunnel: networking/ssh_tunnel.md
+    - VNC: networking/vnc.md
+    - Remote Connection: networking/remote_connection.md
+  - AI:
+    - OpenClaw: AI/openclaw.md
+    - Google Prompting Essentials: AI/Google Prompting Essentials.md
+  - Misc:
+    - Gmail Sync: misc/gmail-sync.md
+    - yt-dlp: misc/yt-dlp.md
+    - Αποδοτική Μελέτη: misc/study_effieciently.md
+    - Plex Server: misc/plex.md
+    - Jellyfin: misc/jellyfin.md
+    - Οι Μεγάλες Πέτρες: misc/big_rocks_of_life.md
+    - Τηλεσκόπιο Κρυονερίου: misc/telescope.md
+    - Κλασική Μουσική: misc/classical_music.md
+    - Η Σελήνη: misc/moon.md
+    - PDF Bookmarks: misc/pdftk.md
+    - PlexTraktSync: misc/plextraktsync.md
+  - Obsidian:
+    - Initial Setup: obsidian/initial_setup.md
+    - Obsidian & Zotero: obsidian/zotero.md
+  - Pandoc:
+    - How to Create Essays: pandoc-latex/instructions.md
+    - Academic Paper Template: pandoc-latex/paper.md
