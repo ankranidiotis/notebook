@@ -74,6 +74,9 @@ nav:
     - Docker + Windows 11 VM: linux/WinApps.md
     - Autosleep: linux/autosleep.md
     - Install Ubuntu MATE: linux/graphics.md
+    - Custom Desktop Launcher: linux/custom_launcher.md
+    - Enroll MOK: linux/enrol_mok.md
+    - Maintenance: linux/maintainance.md
   - Google:
     - Google Cloud Server: Google/gcloud.md
     - Google Drive Direct Link: Google/gdrive.md
@@ -101,6 +104,18 @@ nav:
   - Obsidian:
     - Initial Setup: obsidian/initial_setup.md
     - Obsidian & Zotero: obsidian/zotero.md
+  - Automation:
+    - n8n: automation/n8n.md
+  - Server:
+    - MS SQL Server: server/mssql.md
+  - Courses:
+    - HTML: Courses/html.md
+    - CSS: Courses/css.md
+    - JavaScript: Courses/javascript.md
+    - ΠΛΣ50: Courses/pls50.md
+    - ΠΛΣ51: Courses/pls51.md
+    - ΠΛΣ60: Courses/p;s60.md
+    - ΠΛΣ62: Courses/pls62.md
   - Pandoc:
     - How to Create Essays: pandoc-latex/instructions.md
     - Academic Paper Template: pandoc-latex/paper.md
