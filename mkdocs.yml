@@ -40,6 +40,12 @@ theme:
     - content.code.annotate
     - content.tooltips
 
+extra:
+  social:
+    - icon: material/web
+      link: https://www.nassoskranidiotis.com
+      name: nassoskranidiotis.com
+
 extra_css:
   - stylesheets/extra.css
 
