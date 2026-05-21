@@ -62,6 +62,30 @@ Personal knowledge base covering Linux, networking, AI, Pandoc, and more.
 
     [:octicons-arrow-right-24: Browse](obsidian/initial_setup.md)
 
+-   :material-autorenew:{ .lg .middle } **Automation**
+
+    ---
+
+    Self-hosted automation with n8n running in Docker.
+
+    [:octicons-arrow-right-24: Browse](automation/n8n.md)
+
+-   :material-server-outline:{ .lg .middle } **Server**
+
+    ---
+
+    Self-hosted services and database setup, including MS SQL Server with Docker.
+
+    [:octicons-arrow-right-24: Browse](server/mssql.md)
+
+-   :material-school-outline:{ .lg .middle } **Courses**
+
+    ---
+
+    Notes and resources for HOU courses: HTML, CSS, JavaScript, and ΠΛΣ series.
+
+    [:octicons-arrow-right-24: Browse](Courses/html.md)
+
 -   :material-file-document-outline:{ .lg .middle } **Pandoc**
 
     ---
