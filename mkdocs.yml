@@ -64,6 +64,23 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - AI:
+    - OpenClaw: AI/openclaw.md
+    - Google Prompting Essentials: AI/Google Prompting Essentials.md
+  - Automation:
+    - n8n: automation/n8n.md
+  - Courses:
+    - HTML: Courses/html.md
+    - CSS: Courses/css.md
+    - JavaScript: Courses/javascript.md
+    - ΠΛΣ50: Courses/pls50.md
+    - ΠΛΣ51: Courses/pls51.md
+    - ΠΛΣ60: Courses/pls60.md
+    - ΠΛΣ62: Courses/pls62.md
+  - Google:
+    - Google Cloud Server: Google/gcloud.md
+    - Google Drive Direct Link: Google/gdrive.md
+    - Firebase: Google/Firebase.md
   - Linux:
     - Install AX1800 Driver: linux/Install_AX1800.md
     - Install GUI from Command Line: linux/install_gui_for_cmd.md
@@ -77,18 +94,6 @@ nav:
     - Custom Desktop Launcher: linux/custom_launcher.md
     - Enroll MOK: linux/enrol_mok.md
     - Maintenance: linux/maintainance.md
-  - Google:
-    - Google Cloud Server: Google/gcloud.md
-    - Google Drive Direct Link: Google/gdrive.md
-    - Firebase: Google/Firebase.md
-  - Networking:
-    - SSH: networking/ssh.md
-    - SSH Tunnel: networking/ssh_tunnel.md
-    - VNC: networking/vnc.md
-    - Remote Connection: networking/remote_connection.md
-  - AI:
-    - OpenClaw: AI/openclaw.md
-    - Google Prompting Essentials: AI/Google Prompting Essentials.md
   - Misc:
     - Gmail Sync: misc/gmail-sync.md
     - yt-dlp: misc/yt-dlp.md
@@ -101,21 +106,16 @@ nav:
     - Η Σελήνη: misc/moon.md
     - PDF Bookmarks: misc/pdftk.md
     - PlexTraktSync: misc/plextraktsync.md
+  - Networking:
+    - SSH: networking/ssh.md
+    - SSH Tunnel: networking/ssh_tunnel.md
+    - VNC: networking/vnc.md
+    - Remote Connection: networking/remote_connection.md
   - Obsidian:
     - Initial Setup: obsidian/initial_setup.md
     - Obsidian & Zotero: obsidian/zotero.md
-  - Automation:
-    - n8n: automation/n8n.md
-  - Server:
-    - MS SQL Server: server/mssql.md
-  - Courses:
-    - HTML: Courses/html.md
-    - CSS: Courses/css.md
-    - JavaScript: Courses/javascript.md
-    - ΠΛΣ50: Courses/pls50.md
-    - ΠΛΣ51: Courses/pls51.md
-    - ΠΛΣ60: Courses/pls60.md
-    - ΠΛΣ62: Courses/pls62.md
   - Pandoc:
     - How to Create Essays: pandoc-latex/instructions.md
     - Academic Paper Template: pandoc-latex/paper.md
+  - Server:
+    - MS SQL Server: server/mssql.md
