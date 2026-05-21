@@ -2,11 +2,11 @@
 
 ## Σημειώσεις θεματικής ενότητας
 
-- [Δίκτυα](/docs/HOU/networks.pdf)
-- [Εξειδικεύσεις Δικτύων](/docs/HOU/networks_advanced.pdf)
-- [Κωδικοποίηση](/docs/HOU/coding.pdf)
-- [Κρυπτογραφία και Ασφάλεα Δικτύων](/docs/HOU/cryptography.pdf)
-- [Αριθμοθεωρία και άλλα απαραίτητα μαθηματικά](/docs/HOU/maths.pdf)
+- [Δίκτυα](/docs/Courses/networks.pdf)
+- [Εξειδικεύσεις Δικτύων](/docs/Courses/networks_advanced.pdf)
+- [Κωδικοποίηση](/docs/Courses/coding.pdf)
+- [Κρυπτογραφία και Ασφάλεα Δικτύων](/docs/Courses/cryptography.pdf)
+- [Αριθμοθεωρία και άλλα απαραίτητα μαθηματικά](/docs/Courses/maths.pdf)
 
 ## Βιντεοδιαλέξεις
 
